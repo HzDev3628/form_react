@@ -6,7 +6,7 @@ import { UserData } from '../servers/posts_user'
 import style from './style_forms.module.scss'
 
 const Forms = () => {
-  const [stateLink, setStateLink] = useState(false)
+  const [stateLink, setStateLink] = useState(true)
 
   const {
     register,
