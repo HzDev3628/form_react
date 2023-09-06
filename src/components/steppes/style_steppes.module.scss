@@ -1,0 +1,110 @@
+@import '../servers/mixin';
+
+.global_bg_slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 900px) {
+        align-items: start;
+    }
+
+    @media (max-width: 750px) {
+       align-items: normal; 
+    }
+
+    .image_bg{
+        position: relative;
+        height: 95%;
+
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    .global_image_mobile{
+        display: none;
+
+        @media (max-width: 900px) {
+            display: block;
+            position: relative;
+            width: 80%;
+            height: 200px;
+
+            img{
+                border-radius: 14px;
+                width: 100%;
+                position: absolute;
+            }
+        }
+
+        @media (max-width: 750px) {
+            width: 100%;
+            height: 300px;
+
+            img{
+                border-radius: 0px;
+            }
+        }
+    }
+
+
+    .global_container{
+        display: block;
+        position: absolute;
+
+        margin-bottom: 290px;
+        margin-left: -40px;
+        z-index: 2;
+
+        @media (max-width: 900px) {
+            padding-top: 35px;
+            display: flex;
+            margin: 0;
+        }
+
+        @media (max-width: 750px) {
+            padding-top: 40px;
+         }     
+
+        .container_step{
+            display: flex;
+            align-items: center;
+            width: 180px;
+
+            margin-bottom: 20px;
+
+            .number_step{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 32px;
+                height: 32px;
+
+                border: solid 1px #fff;
+                border-radius: 50%;
+
+                color: #fff;
+                font-size: 14px;
+                font-weight: 600;
+
+                @media (max-width: 900px) {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+
+            .info_step{
+                @include ps_header_step;
+            }
+
+            @media (max-width: 900px) {
+                justify-content: center;
+                width: 80px;
+            }
+        }
+    }
+} 

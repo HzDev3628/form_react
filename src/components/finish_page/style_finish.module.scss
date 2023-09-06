@@ -1,0 +1,149 @@
+@import '../servers/mixin';
+
+.container{
+    @include container;
+
+    .block_info{
+        @include block_info;
+
+        .header{
+            @include header;
+
+            @media (max-width: 445px) {
+                span{
+                    font-size: 14px;
+                }
+            }
+
+            @media (max-width: 390px) {
+                line-height: normal;
+                span{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .block_cost_total{
+            display: block;
+            width: 100%;
+            height: 380px;
+
+            @media (max-width: 600px) {
+                height: auto;
+            }
+            
+            .container_inform{
+                display: block;
+                width: 100%;
+                height: auto;
+    
+                padding: 20px 20px 5px 20px;
+    
+                background-color: #d3cbff2d;
+    
+                border-radius: 10px;
+    
+                .price_plan_block{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    margin-bottom: 20px;
+    
+                    .block_button_plan{
+                        line-height: 20px;
+    
+                        .name_plan{
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+    
+                        .button_change{
+                            @include button_change;
+                        }
+                    }
+    
+                    .price_plan{
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+    
+                }
+    
+                .liner{
+                    width: 100%;
+                    height: 1px;
+                    margin-bottom: 20px;
+                    background-color: #0000002c;
+                }
+    
+                .other_container{
+                    display: flex;
+                    justify-content: space-between ;
+                    width: 100%;
+    
+                    margin-bottom: 15px;
+    
+                    p{
+                        font-size: 14px;
+                        color: #0000007e;
+                    }
+    
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+
+        .total_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 100%;
+            height: 70px;
+
+            padding: 0 20px 0 20px;
+
+            .total_per{
+               font-size: 15px;
+               color: #0000005c; 
+            }
+
+            .total_price{
+                font-size: 20px;
+                font-weight: 600;
+                color: #563de4;
+            }
+        }
+
+        .container_button{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            width: 100%;
+
+            .button_back{
+                @include button_back;
+            }
+
+            .button_confirm{
+                @include button_confirm;
+            }
+
+            @media (max-width: 900px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.container_button_mobile{
+    .button_confirm{
+        @include button_confirm;
+    }
+    @include container_button_mobile;
+}

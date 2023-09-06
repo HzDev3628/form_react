@@ -1,0 +1,48 @@
+.container{
+    display: block;
+    width: 440px;
+    height: auto;
+
+    text-align: center;
+
+    margin: auto;
+
+    img{
+        margin-bottom: 30px;
+    }
+
+    h1{
+        margin-bottom: 14px;
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 24px;
+        color: #00000060;
+    }
+
+    @media (max-width: 900px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+
+        .local_container{
+            display: block;
+            text-align: center;
+
+            @media (max-width: 500px) {
+                p{
+                    margin: auto;
+                    width: 90%;
+                }
+            }
+
+            @media (max-width: 380px) {
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

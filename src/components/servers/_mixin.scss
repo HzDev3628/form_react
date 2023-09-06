@@ -1,0 +1,222 @@
+@mixin button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 50px;
+
+    border-radius: 10px;
+
+    background-color: #201758;
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+
+    &:hover{
+        background-color: #352985;
+    }
+}
+
+@mixin button_back {
+    border: none;
+    background-color: #fff;
+    color: #3a3a3a7c;
+    
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    margin-bottom: 10px;
+
+    transition-property: all;
+    transition-duration: .2s;
+
+    &:hover{
+        color: #1d0086;
+    }
+
+    @media (max-width: 900px) {
+        margin-bottom: 0;
+    }
+}
+
+@mixin container_button_mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    width: 100%;
+    height: 80px;
+    
+    padding: 0 20px 0 20px;
+
+    background-color: #fff;
+    
+    .button_back{
+        @include button_back;
+    }
+
+    .button_next{
+        @include button;
+    }
+
+    @media (min-width: 900px) {
+        display: none;
+    }
+
+    @media (max-width: 900px) {
+        top: 460px;
+    }
+    @media (max-width: 750px) {
+        top: 358px;
+    }
+}
+
+@mixin header {
+    margin-bottom: 20px;
+
+    line-height: 30px;
+    p{
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    span{
+        font-size: 16px;
+        font-weight: 400;
+        color: #0000007c;
+    }
+}
+
+@mixin header_local {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+@mixin ps_price_local {
+    font-size: 14px;
+    font-weight: 300;
+    color: #00000085;
+}
+
+@mixin container {
+    display: block;
+    width: 67%;
+
+    @media (max-width: 900px) {
+        width: 90%;
+    }
+}
+
+@mixin block_info {
+    display: block;
+    width: 450px;
+
+    margin: auto;
+
+    padding: 60px 0 0 0;
+
+    @media (max-width: 900px) {
+        width: 100%;
+        padding: 30px 0 0 0;
+    }
+}
+
+@mixin button_change {
+    background-color: #d3cbff07;
+    color: #00000062;
+
+    border: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    text-decoration: underline;
+    cursor: pointer;
+
+    transition-property: all;
+    transition-duration: .2s;
+
+    &:hover {
+        color: #4922fa;
+    }
+}
+
+@mixin button_submit {
+    width: 120px;
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #31a52d;
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+
+    &:hover{
+        background-color: #31a52d8c;
+    }
+}
+
+@mixin button_confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #513cd6;
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+
+    &:hover{
+        background-color: #8d80d4da;
+    }
+}
+
+@mixin ps_header_step{
+    margin-left: 20px;
+                
+    span{
+        font-size: 12px;
+        color: #ffffff91;
+    }
+
+    p{
+        font-size: 16px;
+        color: #fff;
+    }
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
