@@ -7,6 +7,10 @@ import { UserData } from '../servers/posts_user'
 import { Link } from 'react-router-dom'
 import Steppes from '../steppes/Stepps'
 
+import arcade_img from '../../../public/icon-arcade.svg'
+import advanced_img from '../../../public/icon-advanced.svg'
+import pro_img from '../../../public/icon-pro.svg'
+
 const Plan = ({switchState, setSwitchState, state, setState }) => {
   const Arcade = plan[0]
   const Advanced = plan[1]
@@ -130,7 +134,7 @@ const Plan = ({switchState, setSwitchState, state, setState }) => {
                       ? { backgroundColor: '#fff' }
                       : { backgroundColor: '#bbcdff57', borderColor: '#3c06ff77' }
                   }>
-                  <img src={Arcade.img} alt='arcade' />
+                  <img src={arcade_img} alt='arcade' />
                   <div>
                     <p>{Arcade.name}</p>
                     {state ? (
@@ -155,7 +159,7 @@ const Plan = ({switchState, setSwitchState, state, setState }) => {
                       ? { backgroundColor: '#fff' }
                       : { backgroundColor: '#bbcdff57', borderColor: '#3c06ff77' }
                   }>
-                  <img src={Advanced.img} alt='advanced' />
+                  <img src={advanced_img} alt='advanced' />
 
                   <div>
                     <p>{Advanced.name}</p>
@@ -179,7 +183,7 @@ const Plan = ({switchState, setSwitchState, state, setState }) => {
                       ? { backgroundColor: '#fff' }
                       : { backgroundColor: '#bbcdff57', borderColor: '#3c06ff77' }
                   }>
-                  <img src={Pro.img} alt='pro' />
+                  <img src={pro_img} alt='pro' />
 
                   <div>
                     <p>{Pro.name}</p>
